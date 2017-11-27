@@ -83,6 +83,38 @@
 
 ## 分支
 
+* git checkout <branch-name>
+
+  切换分支
+
+* git branch <branch-name> <remote-branch-name>
+
+  创建一个关联到远程分支的本地分支 如果远程分支没有填，那么创建一个未关联远程分支的本地分支
+
+* git checkout -b <branch-name>
+
+  创建并切换分支
+
+* git branch 
+
+  查看本地分支 当前分支前会有个 * 号标识
+
+* git branch -v
+
+  查看本地分支的最后修改
+
+* git branch -vv
+
+  查看本地分支的最后修改和关联远程分支的情况
+
+* git branch -r
+
+  展示所有的远程分支 -r 代表 --remote
+
+* git branch -a
+
+  展示所有的分支，包括本地的和远程的 -a 代表 --all
+
 
 
 
