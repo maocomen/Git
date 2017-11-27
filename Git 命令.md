@@ -36,27 +36,27 @@
 
   创建 git 版本库
 
-* git remote add <remote-name>  <remote-url>
+* git remote add `<remote-name>`  `<remote-url>`
 
   增加远程仓库
 
-* git remote set-url <remote-name> <remote-url>
+* git remote set-url `<remote-name>` `<remote-url>`
 
   修改远程仓库的url
 
-* git branch -u <remote-name>/<branch-name>
+* git branch -u `<remote-name>`/`<branch-name>`
 
   关联远程分支，下次推送到远程仓库直接 git push 就好了，不需要再次关联了
 
-  git push -u <remote-name>/<branch-name>
+  git push -u `<remote-name>`/`<branch-name>`
 
   也可以在 push 的时候直接指定远程分支
 
-* git clone <remote-url> <path>
+* git clone `<remote-url>` `<path>`
 
   克隆到指定目录 也可以直接 cd 到指定目录下执行 git clone 操作
 
-* git clone -b <branch-name> —single-branch <remote-url>
+* git clone -b `<branch-name>` —single-branch `<remote-url>`
 
   克隆指定的某个分支
 
@@ -64,11 +64,11 @@
 
 ## 基本命令
 
-* git add <file-name>
+* git add `<file-name>`
 
   将修改的文件放到暂存区
 
-* git commit -m <description>
+* git commit -m `<description>`
 
   将修改提交到本地仓库
 
@@ -76,22 +76,22 @@
 
   将本地仓库的 commit 推送到远程仓库
 
-* git rm <file-name>
+* git rm `<file-name>`
 
   删除暂存区中的文件
 
 
 ## 分支
 
-* git checkout <branch-name>
+* git checkout `<branch-name>`
 
   切换分支
 
-* git branch <branch-name> <remote-branch-name>
+* git branch `<branch-name> <remote-branch-name>`
 
   创建一个关联到远程分支的本地分支 如果远程分支没有填，那么创建一个未关联远程分支的本地分支
 
-* git checkout -b <branch-name>
+* git checkout -b `<branch-name>`
 
   创建并切换分支
 
@@ -113,7 +113,33 @@
 
 * git branch -a
 
-  展示所有的分支，包括本地的和远程的 -a 代表 --all
+  展示所有的分支，包括本地的和远程的 -a 代表 —all
+
+* git branch -d `<local-branch-name>`
+
+  删除本地分支
+
+* git branch origin —delete `<remote-branch-name>`
+
+  删除远程分支
+
+  git branch origin :`<remote-branch-name>`
+
+  也可以用这个命令删除远程分支
+
+* git branch -m `<new-branch-name>`
+
+  重命名本地分支
+
+* git merge `<branch-name>`
+
+  合并某分支到前挡分支
+
+* git log —graph
+
+  查看分支合并图
+
+* ​
 
 
 
