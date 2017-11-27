@@ -147,3 +147,5 @@
 # 引用
 
 [廖雪峰的官方网站|集中式vs分布式](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000)
+
+[Git的奇技淫巧🙈](https://github.com/maocomen/Git/blob/master/Git%20命令.md)
