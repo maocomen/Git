@@ -152,6 +152,10 @@
 
   切换标签
 
+* git checkout -b `<branch-name>` `<tag-name>`
+
+  切换到本地标签，并创建一个对应的分支。
+
 * git tag `<tag-name>` `<commit-id>`
 
   对指定的 commit 创建一个标签，如果 commit-id 没有指定，那么对当前最新的 commit 创建一个标签
@@ -168,7 +172,31 @@
 
   展示某个 tag 的详细信息
 
-  ​
+* git tag -s `<tag-name>` -m `<description>` `<commit-id>`
+
+  对指定的 commit 创建一个标签，并进行签名。如果 commit-id 没有指定，那么对当前最新的 commit 创建一个标签。
+
+  签名采用PGP签名，因此，必须首先安装 GPG（GnuPG），如果没有找到 GPG，或者没有 GPG 密钥对，就会报错
+
+* git tag -d `<tag-name>`
+
+  删除标签
+
+* git push `<remote-name>` `<tag-name>`
+
+  将本地标签推送到远程服务器
+
+* git push `<remote-name>` —tags
+
+  将本地未推送到远程服务器的标签一次性全部推送到远程服务器
+
+* git push `<remote-name>` :refs/tags/`<tag-name>`
+
+  删除远程服务器的标签 例如: git push origin :refs/tags/v0.9 删除远程服务器上名为 v0.9 的标签。
+
+  要删除远程服务器的标签，必须先删除本地的标签。
+
+* ​
 
 # 引用
 
