@@ -95,6 +95,10 @@
 
   创建并切换分支
 
+* git checkout -b `<branch-name>` `<remote-branch-name>`
+
+  创建并切换到一个已经关联到远程分支的本地分支
+
 * git branch 
 
   查看本地分支 当前分支前会有个 * 号标识
@@ -139,10 +143,32 @@
 
   查看分支合并图
 
-* ​
 
 
 
+## 标签
+
+* git checkout  `<tag-name>`
+
+  切换标签
+
+* git tag `<tag-name>` `<commit-id>`
+
+  对指定的 commit 创建一个标签，如果 commit-id 没有指定，那么对当前最新的 commit 创建一个标签
+
+* git tag -a `<tag-name>`  -m `<description>`  `<commit-id>`
+
+  对指定的 commit 创建一个标签，如果 commit-id 没有指定，那么对当前最新的 commit 创建一个标签。
+
+* git tag
+
+  查看所有的标签
+
+* git show `<tag-name>`
+
+  展示某个 tag 的详细信息
+
+  ​
 
 # 引用
 
