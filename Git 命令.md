@@ -282,17 +282,21 @@
 
   查看所有的 stash。
 
-* git stash pop
+* git stash pop stash@{`number`}
 
-  回到最后一个 stash 的状态，并删除这个 stash。
+  回到某一个 stash 的状态，并删除这个 stash。如果不加 stash 编号，默认回到最后一个 stash。
 
 * git stash drop stash@{`number`}
 
-  丢弃某一个 stash。
+  丢弃某一个 stash。如果不加 stash 编号，默认丢弃最后一个 stash。
 
 * git stash apply stash@{`number`}
 
-  回到某个 stash 的状态。该命令并不会删除该 stash ，需要我们手动清除。
+  回到某个 stash 的状态。该命令并不会删除该 stash ，需要我们手动清除。如果不加 stash 编号，默认回到最后一个 stash。
+
+* git stash save `<description>`
+
+  添加 stash 的时候加上描述。
 
 # 引用
 
