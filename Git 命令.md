@@ -44,6 +44,10 @@
 
   修改远程仓库的url
 
+* git remote
+
+  列出所有的远程仓库
+
 * git branch -u `<remote-name>`/`<branch-name>`
 
   关联远程分支，下次推送到远程仓库直接 git push 就好了，不需要再次关联了
@@ -137,7 +141,7 @@
 
 * git merge `<branch-name>`
 
-  合并某分支到前挡分支
+  合并某分支到当前分支
 
 * git log —graph
 
@@ -210,8 +214,88 @@
 
   ​
 
+## 其他
+
+* git diff
+
+  输出工作区和暂存区的不同
+
+* git diff —cached
+
+  输出暂存区和本地最近的版本( commit )的不同
+
+* git diff HEAD
+
+  输入工作区、暂存区与本地最近的版本( commit )的不同
+
+* git checkout `<file_name>`
+
+  放弃工作区某个文件的修改
+
+* git checkout .
+
+  放弃工作区的全部修改
+
+* git revert `<commit-id>` 
+
+  工作区回到某个 commit 上个 commit 时候的内容，并新加一个 commit 。
+
+* git reset `<commit-id>` 
+
+  版本库完全回退到某个 commit 时候的内容，并与当前工作区的修改进行合并。
+
+* git commit —amend
+
+  修改当前最新的 commit 的描述。会进入到一个 vim 编辑界面。
+
+* git commit --amend —author='`Author Name <email@address.com>`'
+
+  修改作者名
+
+* git log
+
+  查看提交历史
+
+* git reflog
+
+  查看本地执行过的 git 命令。
+
+* git whatchanged —since='`<time horizon>`'
+
+  查看指定时间范围内的提交记录 时间范围可以是 2 weeks ago，1 day ago ，2 months ago，2 years ago 等
+
+* git cherry-pick `<commit-id>`
+
+  将别的分支的 commit 提交到当前分支
+
+* git config --global alias.`<handle>` `<command>`
+
+  给 git 命令起别名
+
+  我们可以使用 git confit —global alias.st status 来给 status 命令起一个叫 st 的别名，那么我们以后就可以把 git status 命令简写为 git st。
+
+* git stash
+
+  将当前工作区的修改保存起来。
+
+* git stash list
+
+  查看所有的 stash。
+
+* git stash pop
+
+  回到最后一个 stash 的状态，并删除这个 stash。
+
+* git stash drop stash@{`number`}
+
+  丢弃某一个 stash。
+
+* git stash apply stash@{`number`}
+
+  回到某个 stash 的状态。该命令并不会删除该 stash ，需要我们手动清除。
+
 # 引用
 
 [廖雪峰的官方网站|集中式vs分布式](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374027586935cf69c53637d8458c9aec27dd546a6cd6000)
 
-[Git的奇技淫巧🙈](https://github.com/maocomen/Git/blob/master/Git%20命令.md)
+[Git的奇技淫巧🙈](https://www.cnblogs.com/xueweihan/p/5703144.html)
