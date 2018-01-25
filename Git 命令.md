@@ -84,6 +84,16 @@
 
   删除暂存区中的文件
 
+* git fetch
+
+  本地远程分支的记录更新到最新的版本，但是本地当前分支代码并不与远程分支做合并
+
+* git pull
+
+  将当前分支的代码与远程分支的代码进行合并，类似于 git fetch 之后再做一次 git merge
+
+* ​
+
 
 ## 分支
 
@@ -214,65 +224,7 @@
 
   ​
 
-## 其他
-
-* git diff
-
-  输出工作区和暂存区的不同
-
-* git diff —cached
-
-  输出暂存区和本地最近的版本( commit )的不同
-
-* git diff HEAD
-
-  输入工作区、暂存区与本地最近的版本( commit )的不同
-
-* git checkout `<file_name>`
-
-  放弃工作区某个文件的修改
-
-* git checkout .
-
-  放弃工作区的全部修改
-
-* git revert `<commit-id>` 
-
-  工作区回到某个 commit 上个 commit 时候的内容，并新加一个 commit 。
-
-* git reset `<commit-id>` 
-
-  版本库完全回退到某个 commit 时候的内容，并与当前工作区的修改进行合并。
-
-* git commit —amend
-
-  修改当前最新的 commit 的描述。会进入到一个 vim 编辑界面。
-
-* git commit --amend —author='`Author Name <email@address.com>`'
-
-  修改作者名
-
-* git log
-
-  查看提交历史
-
-* git reflog
-
-  查看本地执行过的 git 命令。
-
-* git whatchanged —since='`<time horizon>`'
-
-  查看指定时间范围内的提交记录 时间范围可以是 2 weeks ago，1 day ago ，2 months ago，2 years ago 等
-
-* git cherry-pick `<commit-id>`
-
-  将别的分支的 commit 提交到当前分支
-
-* git config --global alias.`<handle>` `<command>`
-
-  给 git 命令起别名
-
-  我们可以使用 git confit —global alias.st status 来给 status 命令起一个叫 st 的别名，那么我们以后就可以把 git status 命令简写为 git st。
+## 存储
 
 * git stash
 
@@ -301,6 +253,72 @@
 * git stash -u
 
   添加一个 stash。包括新建的，未在版本库索引中的文件。
+
+* git stash clear
+
+  删除所有的 stash
+
+
+
+## 其他
+
+- git diff
+
+  输出工作区和暂存区的不同
+
+- git diff —cached
+
+  输出暂存区和本地最近的版本( commit )的不同
+
+- git diff HEAD
+
+  输入工作区、暂存区与本地最近的版本( commit )的不同
+
+- git checkout `<file_name>`
+
+  放弃工作区某个文件的修改
+
+- git checkout .
+
+  放弃工作区的全部修改
+
+- git revert `<commit-id>` 
+
+  工作区回到某个 commit 上个 commit 时候的内容，并新加一个 commit 。
+
+- git reset `<commit-id>` 
+
+  版本库完全回退到某个 commit 时候的内容，并与当前工作区的修改进行合并。
+
+- git commit —amend
+
+  修改当前最新的 commit 的描述。会进入到一个 vim 编辑界面。
+
+- git commit --amend —author='`Author Name <email@address.com>`'
+
+  修改作者名
+
+- git log
+
+  查看提交历史
+
+- git reflog
+
+  查看本地执行过的 git 命令。
+
+- git whatchanged —since='`<time horizon>`'
+
+  查看指定时间范围内的提交记录 时间范围可以是 2 weeks ago，1 day ago ，2 months ago，2 years ago 等
+
+- git cherry-pick `<commit-id>`
+
+  将别的分支的 commit 提交到当前分支
+
+- git config --global alias.`<handle>` `<command>`
+
+  给 git 命令起别名
+
+  我们可以使用 git confit —global alias.st status 来给 status 命令起一个叫 st 的别名，那么我们以后就可以把 git status 命令简写为 git st。
 
 # 引用
 
