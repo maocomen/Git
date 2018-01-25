@@ -92,7 +92,7 @@
 
   将当前分支的代码与远程分支的代码进行合并，类似于 git fetch 之后再做一次 git merge
 
-* ​
+  ​
 
 
 ## 分支
@@ -258,7 +258,9 @@
 
   删除所有的 stash
 
+* git checkout  stash@{`n`} — `<file_path>`
 
+  从 stash 中拿出某个文件的修改
 
 ## 其他
 
