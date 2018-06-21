@@ -137,11 +137,11 @@
 
   删除本地分支
 
-* git branch origin —delete `<remote-branch-name>`
+* git push origin —delete `<remote-branch-name>`
 
   删除远程分支
 
-  git branch origin :`<remote-branch-name>`
+  git push origin :`<remote-branch-name>`
 
   也可以用这个命令删除远程分支
 
@@ -381,7 +381,7 @@
 
 - git clean -X -f
 
-  清楚 `.gitignore` 文件中记录的文件
+  清除 `.gitignore` 文件中记录的文件
 
 - ​
 
