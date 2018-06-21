@@ -262,6 +262,37 @@
 
   从 stash 中拿出某个文件的修改
 
+
+
+## 跟踪
+
+* git ls-files -t
+
+  展示所有 tracked 的文件
+
+* git ls-files —others
+
+  展示所有 untracked 的文件
+
+* git ls-files —others -i —exclude-standard
+
+  展示所有忽略的文件
+
+* git clean `<file_name>` -f
+
+  强制删除 untracked 的文件
+
+  可以用来删除新建的文件。如果不指定文件名，则清空所有工作的 untracked 文件。需要注意的是：
+
+  * clean 后，删除的文件无法找回
+  * 不会影响 tracked 的文件的改动，只会删除 untracked 的文件
+
+* git clean `<directiry_name>` -df
+
+  强制删除 untracked 的目录
+
+  ​
+
 ## 其他
 
 - git diff
@@ -304,6 +335,10 @@
 
   查看提交历史
 
+- git log —pretty=oneline —graph —decorate —all
+
+  展示简化的 commit 历史
+
 - git reflog
 
   查看本地执行过的 git 命令。
@@ -321,6 +356,34 @@
   给 git 命令起别名
 
   我们可以使用 git confit —global alias.st status 来给 status 命令起一个叫 st 的别名，那么我们以后就可以把 git status 命令简写为 git st。
+
+- git bundle create `<file>` `<branch-name>`
+
+  把某一个分支导出成一个文件
+
+- git clone repo.bundle `<repo-dir>` -b `<branch-name>`
+
+  从包中导入一个分支
+
+  新建一个分支，分支内容就是上面 `git bundle create` 命令导出的内容
+
+- git rebase —autostash
+
+  执行 rebase 之前自动 stash
+
+- git fetch origin pull/`<id>`/head:`<branch-name>`
+
+  从远程仓库根据 ID ，拉下某一状态，到本地分支
+
+- git diff —word-diff
+
+  详细展示一行中的修改
+
+- git clean -X -f
+
+  清楚 `.gitignore` 文件中记录的文件
+
+- ​
 
 # 引用
 
